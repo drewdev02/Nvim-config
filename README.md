@@ -5,12 +5,13 @@ winget install neovim
 or 
 choco install neovim
 
-# Set XDG_CONFIG_HOME environment variable
-# Run in PowerShell as administrator
+# Set XDG_CONFIG_HOME environment variable and Run in PowerShell as administrator
 [Environment]::SetEnvironmentVariable('XDG_CONFIG_HOME', '$env:USERPROFILE\.config', 'Machine')
 
 # Clone repo into that path 
+'''
 git clone https://github.com/drewdev02/Nvim-config.git
+'''
 
 # Rename folder to nvim
 Rename-Item -Path "$env:USERPROFILE\.config\Nvim-config" -NewName "nvim"
